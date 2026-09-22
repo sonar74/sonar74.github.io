@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TapTap官网提供全球热门手游下载、游戏社区互动、玩家评价及游戏资讯服务。发现高质量独立游戏、二次元手游与竞技游戏，即刻体验。">
+    <meta name="keywords" content="taptap官网,手游下载,游戏社区,独立游戏,二次元手游,玩家评价,游戏资讯">
+    <title>taptap官网-全球手游社区与游戏下载平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00C1DE;
+            --secondary-color: #1F2D3D;
+            --accent-color: #FFD700;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #F5F6F8;
+            --bg-card: #FFFFFF;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 24px rgba(0, 193, 222, 0.15);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 193, 222, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #00a8c6;
+            transform: translateY(-1px);
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #eee;
+            overflow: hidden;
+        }
+
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(0, 193, 222, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-hover);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .see-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .see-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Game Cards Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .game-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-cover {
+            width: 100%;
+            height: 260px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-rating {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-rating::before {
+            content: "★";
+            color: var(--accent-color);
+            font-size: 10px;
+        }
+
+        .card-info {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .download-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .game-card:hover .download-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Category Pills */
+        .category-scroll {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .category-scroll::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .cat-pill {
+            padding: 10px 24px;
+            background: var(--bg-card);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cat-pill.active, .cat-pill:hover {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+
+        /* Ranking List */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 15px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: background 0.2s;
+        }
+
+        .ranking-item:hover {
+            background: #f9f9f9;
+        }
+
+        .rank-num {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ddd;
+            width: 30px;
+            text-align: center;
+        }
+
+        .rank-num.top-1 { color: #FFD700; }
+        .rank-num.top-2 { color: #C0C0C0; }
+        .rank-num.top-3 { color: #CD7F32; }
+
+        .rank-info {
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .rank-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .rank-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .rank-score {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* News Section */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .news-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .news-img {
+            height: 160px;
+            background-color: #eee;
+        }
+
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-tag {
+            font-size: 12px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-date {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 60px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .footer-brand p {
+            color: #aaa;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 60px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .game-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="6" fill="#00C1DE"/>
+                    <path d="M7 8L10 16H14L17 8H15L13 14H11L9 8H7Z" fill="white"/>
+                </svg>
+                <span>TapTap</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">游戏库</a>
+                <a href="#">社区</a>
+                <a href="#">资讯</a>
+                <a href="#">榜单</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">下载APP</button>
+                <div class="user-avatar">
+                    <img src="https://picsum.photos/seed/user/100/100" alt="用户头像">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-tags">
+                        <span class="tag">#二次元</span>
+                        <span class="tag">#独立游戏</span>
+                        <span class="tag">#开放世界</span>
+                    </div>
+                    <h1>发现好游戏，<br>遇见同好玩家</h1>
+                    <p>TapTap 是国内领先的手游社区与下载平台。在这里，你可以获取第一手游戏资讯、查看真实玩家评价、参与深度讨论，并下载经过严格审核的高品质游戏。</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button class="btn btn-primary" style="padding: 12px 30px; font-size: 16px;">立即下载</button>
+                        <button class="btn btn-outline" style="padding: 12px 30px; font-size: 16px;">浏览推荐</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/taptaphero/600/400" alt="TapTap 游戏展示">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="container section">
+            <div class="category-scroll">
+                <div class="cat-pill active">推荐</div>
+                <div class="cat-pill">二次元</div>
+                <div class="cat-pill">角色扮演</div>
+                <div class="cat-pill">动作射击</div>
+                <div class="cat-pill">策略经营</div>
+                <div class="cat-pill">休闲益智</div>
+                <div class="cat-pill">模拟经营</div>
+                <div class="cat-pill">独立游戏</div>
+            </div>
+        </section>
+
+        <!-- Hot Games Grid -->
+        <section class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>热门手游推荐</h2>
+                        <p>根据玩家实时热度与评分精选</p>
+                    </div>
+                    <a href="#" class="see-more">查看全部 ></a>
+                </div>
+                <div class="game-grid">
+                    <!-- Game Card 1 -->
+                    <article class="game-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/game1/300/400" alt="游戏封面">
+                            <div class="card-rating">9.8</div>
+                            <button class="download-btn">立即下载</button>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">星穹铁道：终焉之战</h3>
+                            <div class="card-meta">
+                                <span>二次元 / RPG</span>
+                                <span>4.2GB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 2 -->
+                    <article class="game-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/game2/300/400" alt="游戏封面">
+                            <div class="card-rating">9.6</div>
+                            <button class="download-btn">立即下载</button>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">荒野行动：代号Z</h3>
+                            <div class="card-meta">
+                                <span>射击 / 战术竞技</span>
+                                <span>2.8GB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 3 -->
+                    <article class="game-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/game3/300/400" alt="游戏封面">
+                            <div class="card-rating">9.5</div>
+                            <button class="download-btn">立即下载</button>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">原神：风起之地</h3>
+                            <div class="card-meta">
+                                <span>开放世界 / 冒险</span>
+                                <span>5.0GB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 4 -->
+                    <article class="game-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/game4/300/400" alt="游戏封面">
+                            <div class="card-rating">9.4</div>
+                            <button class="download-btn">立即下载</button>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">崩坏：星穹铁道</h3>
+                            <div class="card-meta">
+                                <span>回合制 / 养成</span>
+                                <span>3.5GB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 5 -->
+                    <article class="game-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/game5/300/400" alt="游戏封面">
+                            <div class="card-rating">9.3</div>
+                            <button class="download-btn">立即下载</button>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">重返未来：1999</h3>
+                            <div class="card-meta">
+                                <span>策略 / 剧情向</span>
+                                <span>1.2GB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Game Card 6 -->
+                    <article class="game-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/game6/300/400" alt="游戏封面">
+                            <div class="card-rating">9.2</div>
+                            <button class="download-btn">立即下载</button>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">第五人格</h3>
+                            <div class="card-meta">
+                                <span>非对称竞技</span>
+                                <span>1.8GB</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>玩家评分榜</h2>
+                        <p>基于真实玩家反馈的评分数据</p>
+                    </div>
+                </div>
+                <div class="ranking-list">
+                    <div class="ranking-item">
+                        <div class="rank-num top-1">1</div>
+                        <div class="rank-info">
+                            <div class="rank-title">光·遇</div>
+                            <div class="rank-desc">社交冒险 · 治愈系</div>
+                        </div>
+                        <div class="rank-score">9.9</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num top-2">2</div>
+                        <div class="rank-info">
+                            <div class="rank-title">明日方舟</div>
+                            <div class="rank-desc">策略塔防 · 深度剧情</div>
+                        </div>
+                        <div class="rank-score">9.8</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num top-3">3</div>
+                        <div class="rank-info">
+                            <div class="rank-title">永劫无间</div>
+                            <div class="rank-desc">武侠 · 大逃杀</div>
+                        </div>
+                        <div class="rank-score">9.7</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num">4</div>
+                        <div class="rank-info">
+                            <div class="rank-title">蛋仔派对</div>
+                            <div class="rank-desc">休闲 · 跑酷</div>
+                        </div>
+                        <div class="rank-score">9.6</div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="rank-num">5</div>
+                        <div class="rank-info">
+                            <div class="rank-title">幻塔</div>
+                            <div class="rank-desc">开放世界 / 二次元</div>
+                        </div>
+                        <div class="rank-score">9.5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>最新资讯</h2>
+                        <p>TapTap 团队为您精选的游戏动态</p>
+                    </div>
+                    <a href="#" class="see-more">更多资讯 ></a>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="https://picsum.photos/seed/news1/400/300" alt="新闻图片">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">公告</span>
+                            <h3 class="news-title">TapTap 2024 年度开发者大会即将举行</h3>
+                            <span class="news-date">2023-10-24</span>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="https://picsum.photos/seed/news2/400/300" alt="新闻图片">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">评测</span>
+                            <h3 class="news-title">深度评测：这款独立游戏重新定义了生存玩法</h3>
+                            <span class="news-date">2023-10-22</span>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-img">
+                            <img src="https://picsum.photos/seed/news3/400/300" alt="新闻图片">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">活动</span>
+                            <h3 class="news-title">万圣节特别活动：限定皮肤免费领取中</h3>
+                            <span class="news-date">2023-10-20</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>TapTap</h3>
+                    <p>发现好游戏，遇见同好玩家。TapTap 是中国领先的手游社区与下载平台，致力于为玩家提供纯净的游戏体验和真实的玩家评价。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">账号安全</a></li>
+                        <li><a href="#">下载指引</a></li>
+                        <li><a href="#">社区规范</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方贴吧</a></li>
+                        <li><a href="#">B站直播间</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TapTap. All Rights Reserved. 本网站为演示页面，不提供真实游戏下载服务。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
