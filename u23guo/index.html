@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>u23国足直播-中国U23国家队比赛赛程、实时观赛入口与战术分析</title>
+    <meta name="description" content="u23国足直播提供中国U23国家队最新赛事直播入口、比赛赛程安排、球员名单及赛前战术分析。关注U23亚洲杯及奥预赛，实时观看高清比赛，获取最新战报与数据统计。">
+    <meta name="keywords" content="u23国足直播,中国U23直播,U23亚洲杯直播,中国男足U23,奥预赛直播">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c8102e;
+            --primary-hover: #a00d26;
+            --secondary-color: #00468c;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f5f7;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-more {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .view-more:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #fee2e2;
+            color: #dc2626;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #dc2626;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #d1d5db;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Live Match Grid */
+        .match-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .match-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e5e7eb;
+        }
+
+        .match-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .match-header {
+            background-color: #f8fafc;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .match-time {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .match-status {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #e0f2fe;
+            color: #0284c7;
+        }
+
+        .match-status.finished {
+            background-color: #f1f5f9;
+            color: #64748b;
+        }
+
+        .match-body {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+        }
+
+        .team-logo {
+            width: 50px;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .team-name {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .score {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-main);
+            width: 30%;
+            text-align: center;
+        }
+
+        .match-actions {
+            text-align: center;
+        }
+
+        .btn-watch {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .btn-watch:hover {
+            background-color: #003580;
+        }
+
+        /* Info Section */
+        .info-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-thumb {
+            width: 160px;
+            height: 100px;
+            background-color: #ddd;
+            border-radius: 6px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .news-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .news-content h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .news-meta {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .player-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .player-list li:last-child {
+            border-bottom: none;
+        }
+
+        .player-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+            background-color: #eee;
+        }
+
+        .player-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .player-info p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Schedule Table */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .schedule-table th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .schedule-table tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .team-cell {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+
+            .match-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-item {
+                flex-direction: column;
+            }
+
+            .news-thumb {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">U23<span>国足直播</span></a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">赛程直播</a></li>
+                <li><a href="#">战报资讯</a></li>
+                <li><a href="#">球员名单</a></li>
+                <li><a href="#">历史数据</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>中国U23国家队：未来之星的集结号</h1>
+            <p>关注U23亚洲杯及奥运会预选赛，实时获取中国U23国足直播信号、首发阵容及比赛精彩回放。</p>
+            <a href="#live" class="btn-primary">立即观看直播</a>
+        </div>
+    </section>
+
+    <!-- Live Matches Section -->
+    <section class="container" id="live">
+        <div class="section-header">
+            <h2 class="section-title">正在直播 / 近期赛程</h2>
+            <a href="#" class="view-more">查看全部赛程 &rarr;</a>
+        </div>
+
+        <div class="match-grid">
+            <!-- Match Card 1 -->
+            <article class="match-card">
+                <div class="match-header">
+                    <span class="match-time">2023-10-16 19:35</span>
+                    <span class="match-status live">直播中</span>
+                </div>
+                <div class="match-body">
+                    <div class="team">
+                        <div class="team-logo">🇨🇳</div>
+                        <span class="team-name">中国U23</span>
+                    </div>
+                    <div class="score">1 - 1</div>
+                    <div class="team">
+                        <div class="team-logo">🇸🇦</div>
+                        <span class="team-name">沙特U23</span>
+                    </div>
+                </div>
+                <div class="match-actions" style="padding: 0 20px 20px;">
+                    <a href="#" class="btn-watch">进入直播间</a>
+                </div>
+            </article>
+
+            <!-- Match Card 2 -->
+            <article class="match-card">
+                <div class="match-header">
+                    <span class="match-time">2023-10-19 20:00</span>
+                    <span class="match-status">未开始</span>
+                </div>
+                <div class="match-body">
+                    <div class="team">
+                        <div class="team-logo">🇯🇵</div>
+                        <span class="team-name">日本U23</span>
+                    </div>
+                    <div class="score">VS</div>
+                    <div class="team">
+                        <div class="team-logo">🇨🇳</div>
+                        <span class="team-name">中国U23</span>
+                    </div>
+                </div>
+                <div class="match-actions" style="padding: 0 20px 20px;">
+                    <a href="#" class="btn-watch">预约提醒</a>
+                </div>
+            </article>
+
+            <!-- Match Card 3 -->
+            <article class="match-card">
+                <div class="match-header">
+                    <span class="match-time">2023-10-22 17:00</span>
+                    <span class="match-status finished">已结束</span>
+                </div>
+                <div class="match-body">
+                    <div class="team">
+                        <div class="team-logo">🇸🇾</div>
+                        <span class="team-name">叙利亚U23</span>
+                    </div>
+                    <div class="score">0 - 2</div>
+                    <div class="team">
+                        <div class="team-logo">🇨🇳</div>
+                        <span class="team-name">中国U23</span>
+                    </div>
+                </div>
+                <div class="match-actions" style="padding: 0 20px 20px;">
+                    <a href="#" class="btn-watch" style="background-color: #64748b;">查看回放</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Info & Sidebar -->
+    <section class="container info-section">
+        <!-- News Column -->
+        <div class="news-column">
+            <div class="section-header">
+                <h2 class="section-title">最新资讯</h2>
+            </div>
+            <div class="news-list">
+                <article class="news-item">
+                    <div class="news-thumb">
+                        <img src="https://picsum.photos/seed/u23news1/300/200" alt="U23国足备战">
+                    </div>
+                    <div class="news-content">
+                        <h3><a href="#">U23国足集训名单公布：新星闪耀，老将压阵</a></h3>
+                        <p class="news-meta">发布于 2小时前 | 赛前分析</p>
+                        <p>本次集训旨在备战即将到来的U23亚洲杯，主教练公布了25人大名单，多名留洋小将入选...</p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-thumb">
+                        <img src="https://picsum.photos/seed/u23news2/300/200" alt="战术分析">
+                    </div>
+                    <div class="news-content">
+                        <h3><a href="#">战术复盘：中国U23如何破解高位逼抢？</a></h3>
+                        <p class="news-meta">发布于 5小时前 | 战术解读</p>
+                        <p>在上一场对阵沙特U23的比赛中，球队在进攻组织上暴露出了一些问题，本文将详细分析...</p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-thumb">
+                        <img src="https://picsum.photos/seed/u23news3/300/200" alt="球员专访">
+                    </div>
+                    <div class="news-content">
+                        <h3><a href="#">专访核心球员：为奥运会资格而战</a></h3>
+                        <p class="news-meta">发布于 1天前 | 球员专访</p>
+                        <p>作为球队的中场核心，他在接受采访时表示，全队上下对晋级目标充满信心，将全力以赴...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门球员</h3>
+                <ul class="player-list">
+                    <li>
+                        <img src="https://picsum.photos/seed/player1/50/50" alt="球员头像" class="player-avatar">
+                        <div class="player-info">
+                            <h4>张玉宁</h4>
+                            <p>前锋 | 9号</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://picsum.photos/seed/player2/50/50" alt="球员头像" class="player-avatar">
+                        <div class="player-info">
+                            <h4>戴伟浚</h4>
+                            <p>中场 | 10号</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://picsum.photos/seed/player3/50/50" alt="球员头像" class="player-avatar">
+                        <div class="player-info">
+                            <h4>蒋圣龙</h4>
+                            <p>后卫 | 6号</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">观赛指南</h3>
+                <ul class="player-list">
+                    <li>
+                        <a href="#" style="font-size: 14px;">如何设置直播提醒？</a>
+                    </li>
+                    <li>
+                        <a href="#" style="font-size: 14px;">直播平台有哪些？</a>
+                    </li>
+                    <li>
+                        <a href="#" style="font-size: 14px;">比赛转播权归属说明</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Detailed Schedule -->
+    <section class="container" style="margin-bottom: 50px;">
+        <div class="section-header">
+            <h2 class="section-title">完整赛程表</h2>
+        </div>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th width="15%">比赛时间</th>
+                    <th width="35%">对阵双方</th>
+                    <th width="15%">比赛性质</th>
+                    <th width="15%">直播平台</th>
+                    <th width="20%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10月19日 20:00</td>
+                    <td>
+                        <div class="team-cell">
+                            <span>🇯🇵 日本</span> <span>VS</span> <span>🇨🇳 中国</span>
+                        </div>
+                    </td>
+                    <td>U23亚洲杯小组赛</td>
+                    <td>咪咕视频、央视体育</td>
+                    <td><a href="#" class="btn-watch" style="padding: 4px 12px; font-size: 12px;">预约</a></td>
+                </tr>
+                <tr>
+                    <td>10月22日 17:00</td>
+                    <td>
+                        <div class="team-cell">
+                            <span>🇸🇾 叙利亚</span> <span>VS</span> <span>🇨🇳 中国</span>
+                        </div>
+                    </td>
+                    <td>U23亚洲杯小组赛</td>
+                    <td>咪咕视频、央视体育</td>
+                    <td><a href="#" class="btn-watch" style="padding: 4px 12px; font-size: 12px;">预约</a></td>
+                </tr>
+                <tr>
+                    <td>10月25日 17:00</td>
+                    <td>
+                        <div class="team-cell">
+                            <span>🇨🇳 中国</span> <span>VS</span> <span>🇦🇪 阿联酋</span>
+                        </div>
+                    </td>
+                    <td>U23亚洲杯小组赛</td>
+                    <td>咪咕视频、央视体育</td>
+                    <td><a href="#" class="btn-watch" style="padding: 4px 12px; font-size: 12px;">预约</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">免责声明</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>赛事服务</h4>
+                <ul>
+                    <li><a href="#">赛程查询</a></li>
+                    <li><a href="#">直播中心</a></li>
+                    <li><a href="#">数据统计</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门标签</h4>
+                <ul>
+                    <li><a href="#">u23国足直播</a></li>
+                    <li><a href="#">奥运会预选赛</a></li>
+                    <li><a href="#">亚洲杯</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p style="font-size: 14px; margin-bottom: 10px;">获取最新U23国足资讯</p>
+                <div style="display: flex; gap: 10px;">
+                    <div style="width: 30px; height: 30px; background: #374151; border-radius: 4px;"></div>
+                    <div style="width: 30px; height: 30px; background: #374151; border-radius: 4px;"></div>
+                    <div style="width: 30px; height: 30px; background: #374151; border-radius: 4px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 U23国足直播网. All Rights Reserved. 仅供信息展示与观赛导航。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
