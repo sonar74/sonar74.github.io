@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="桃花红 - 桃花红时节赏花指南、桃树品种介绍、种植养护技巧及春季踏青旅游攻略。">
+    <meta name="keywords" content="桃花红, 桃花, 春季赏花, 桃树种植, 踏青, 桃花节">
+    <title>桃花红 - 春季赏花指南与种植养护知识</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d64040;
+            --primary-light: #f0e6e6;
+            --secondary-color: #5d4037;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-body: #fdfbf7;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(214, 64, 64, 0.1);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/peachblossom/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #c03030;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(214, 64, 64, 0.4);
+        }
+
+        /* 介绍区域 */
+        .intro-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .intro-img img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* 热门赏花地 */
+        .spots-section {
+            margin-bottom: 60px;
+        }
+
+        .spots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .spot-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .spot-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .spot-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .spot-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .spot-card:hover .spot-img img {
+            transform: scale(1.05);
+        }
+
+        .spot-info {
+            padding: 20px;
+        }
+
+        .spot-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .spot-info p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .spot-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* 种植指南 */
+        .guide-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .guide-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background-color: #eee;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+            box-shadow: 0 0 0 5px white;
+        }
+
+        .step-item h4 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .step-item p {
+            font-size: 14px;
+            color: var(--text-light);
+            padding: 0 10px;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            background-color: #fff;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-steps::before {
+                display: none;
+            }
+
+            .step-item {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">🌸 桃花红 <span>Guide</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#spots">赏花胜地</a></li>
+                    <li><a href="#guide">种植指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>桃花红，春意浓</h1>
+                <p>探索中国最美的春季赏花路线，了解桃树品种与养护技巧</p>
+                <a href="#spots" class="btn btn-primary">立即查看赏花地图</a>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="container intro-section">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h3>关于“桃花红”</h3>
+                    <p>“桃花红”不仅描绘了春天最动人的色彩，也是传统文化中寓意吉祥与浪漫的象征。每年春季，漫山遍野的桃花竞相开放，形成壮观的“桃花红”景象。</p>
+                    <p>本站致力于为花友和游客提供最全面的桃花观赏指南，从最佳观赏时间到各地特色赏花胜地，助您不负春光。</p>
+                </div>
+                <div class="intro-img">
+                    <img src="https://picsum.photos/seed/peachblossom2/600/400.jpg" alt="盛开的桃花">
+                </div>
+            </div>
+        </section>
+
+        <!-- Spots Section -->
+        <section id="spots" class="container spots-section">
+            <div class="section-title">
+                <h2>热门赏花胜地</h2>
+                <p>精选国内最适合观赏桃花红的地点</p>
+            </div>
+            <div class="spots-grid">
+                <article class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://picsum.photos/seed/peach1/400/300.jpg" alt="北京平谷桃花海">
+                    </div>
+                    <div class="spot-info">
+                        <h3>北京平谷桃花海</h3>
+                        <p>华北地区规模最大的桃花观赏区，数十万亩桃花连绵成海，景色壮观。</p>
+                        <span class="spot-tag">最佳时间：4月中旬</span>
+                    </div>
+                </article>
+                <article class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://picsum.photos/seed/peach2/400/300.jpg" alt="安徽歙县石潭">
+                    </div>
+                    <div class="spot-info">
+                        <h3>安徽歙县石潭</h3>
+                        <p>春日云海与桃花交相辉映，是摄影爱好者的天堂，村落与桃花相映成趣。</p>
+                        <span class="spot-tag">最佳时间：3月下旬</span>
+                    </div>
+                </article>
+                <article class="spot-card">
+                    <div class="spot-img">
+                        <img src="https://picsum.photos/seed/peach3/400/300.jpg" alt="四川青城山">
+                    </div>
+                    <div class="spot-info">
+                        <h3>四川青城山</h3>
+                        <p>古木参天间点缀着点点桃花红，道教名山与自然美景完美融合。</p>
+                        <span class="spot-tag">最佳时间：3月底-4月初</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="container">
+            <div class="section-title">
+                <h2>桃树种植与养护指南</h2>
+                <p>想让自家院子里也开满“桃花红”？请参考以下步骤</p>
+            </div>
+            <div class="guide-steps">
+                <div class="step-item">
+                    <div class="step-icon">1</div>
+                    <h4>选种与育苗</h4>
+                    <p>选择适合当地气候的优良品种，如“白花碧桃”或“红叶碧桃”。春季萌芽前进行定植，注意苗木根系舒展。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">2</div>
+                    <h4>水肥管理</h4>
+                    <p>桃树喜光怕涝。生长季需保证充足水分，开花前追施磷钾肥以促花芽分化，雨季注意排水防烂根。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">3</div>
+                    <h4>修剪整形</h4>
+                    <p>采用开心形或自然开心形修剪。及时剪除徒长枝、交叉枝，保持通风透光，才能结出更多果实和花朵。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">4</div>
+                    <h4>病虫害防治</h4>
+                    <p>重点防治蚜虫、红蜘蛛及流胶病。冬季清园，喷洒石硫合剂，减少来年病虫害发生。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container faq-section">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于桃花红及赏花的疑问</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">桃花花期一般持续多久？</div>
+                    <div class="faq-answer">单朵桃花的花期通常只有3到7天，但整株树从开花到谢花可持续半个月左右。受气温影响，花期早晚略有不同。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">为什么有的桃花是红色的，有的是粉色的？</div>
+                    <div class="faq-answer">花色主要由花瓣中的花青素含量决定。红色品种花青素多，粉色品种花青素少且含有黄色素，白色品种花青素极少。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">桃花谢了之后会结桃子吗？</div>
+                    <div class="faq-answer">是的，桃花是自花授粉植物，授粉成功后通常会结果。不过为了果实的品质，通常需要疏花疏果。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>赏花指南</h4>
+                    <ul>
+                        <li><a href="#">春季赏花</a></li>
+                        <li><a href="#">周边游</a></li>
+                        <li><a href="#">摄影技巧</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>园艺知识</h4>
+                    <ul>
+                        <li><a href="#">果树种植</a></li>
+                        <li><a href="#">病虫害防治</a></li>
+                        <li><a href="#">土壤肥料</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 桃花红 Guide 版权所有 | 仅供展示用途
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
