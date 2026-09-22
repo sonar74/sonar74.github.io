@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="袁隆平电影专题页，收录关于杂交水稻之父袁隆平的纪录片、传记电影、人物传记及经典影视作品。提供影片简介、观看指南、生平回顾及相关纪念活动资讯。">
+    <meta name="keywords" content="电影袁隆平,袁隆平纪录片,袁隆平传记电影,杂交水稻之父,袁隆平电影推荐">
+    <title>电影袁隆平-杂交水稻之父生平影像与纪录片推荐</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --primary-dark: #1b5e20;
+            --accent-color: #fdd835;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部 */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .hero-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 简介区域 */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+            color: var(--text-secondary);
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .intro-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* 电影列表 */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .movie-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 aspect ratio */
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .movie-card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            background-color: var(--white);
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .category-item a {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .category-item a:hover, .category-item a.active {
+            color: var(--primary-color);
+            background-color: rgba(46, 125, 50, 0.1);
+        }
+
+        /* 生平时间轴 */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #ddd;
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border: 4px solid var(--white);
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px var(--primary-color);
+            z-index: 1;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #aaa;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image {
+                height: 300px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                justify-content: flex-start;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: 100%;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>稻香影苑</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#movies">电影推荐</a></li>
+                    <li><a href="#timeline">生平回顾</a></li>
+                    <li><a href="#info">人物资料</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>电影袁隆平：致敬“杂交水稻之父”</h1>
+            <p>通过影像记录袁隆平院士的科研历程、生平事迹与精神遗产。探索关于中国杂交水稻发展的纪录片、传记电影及相关影视作品。</p>
+            <div class="hero-tags">
+                <span class="hero-tag">杂交水稻</span>
+                <span class="hero-tag">袁隆平纪录片</span>
+                <span class="hero-tag">科学精神</span>
+                <span class="hero-tag">国家荣誉</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="category-nav">
+        <div class="container">
+            <ul class="category-list">
+                <li class="category-item"><a href="#" class="active">全部</a></li>
+                <li class="category-item"><a href="#">人物传记</a></li>
+                <li class="category-item"><a href="#">纪录片</a></li>
+                <li class="category-item"><a href="#">新闻纪实</a></li>
+                <li class="category-item"><a href="#">纪念影片</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- 简介区域 -->
+        <section class="section" id="intro">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <span class="intro-badge">人物专题</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">关于袁隆平</h2>
+                    <p>袁隆平（1930年9月7日－2021年5月22日），中国杂交水稻育种专家，中国研究与发展杂交水稻的开创者，被誉为“世界杂交水稻之父”。他致力于杂交水稻技术的研究、应用与推广，发明了“三系法”籼型杂交水稻，成功解决了中国人的吃饭问题，并为世界粮食安全做出了杰出贡献。</p>
+                    <p>他的生平故事多次被搬上银幕，通过电影与纪录片的形式，向世人展示了这位科学家在田间地头艰苦奋斗、追求真理的感人历程，以及他淡泊名利、心系苍生的崇高品格。</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#timeline" class="btn">查看生平大事记</a>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <!-- 使用随机种子生成占位图，模拟人物肖像 -->
+                    <img src="https://picsum.photos/seed/yuanljp1/600/800.jpg" alt="袁隆平院士肖像示意图">
+                </div>
+            </div>
+        </section>
+
+        <!-- 电影推荐列表 -->
+        <section class="section" id="movies">
+            <div class="section-header">
+                <h2 class="section-title">精选影视作品</h2>
+                <p style="color: var(--text-secondary);">关于袁隆平院士的纪录片与传记电影推荐</p>
+            </div>
+
+            <div class="movie-grid">
+                <!-- 卡片 1 -->
+                <article class="movie-card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">纪录片</span>
+                        <img src="https://picsum.photos/seed/doc1/400/560.jpg" alt="袁隆平纪录片封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">《袁隆平的世界》</h3>
+                        <div class="card-meta">
+                            <span>2021年</span>
+                            <span>90分钟</span>
+                        </div>
+                        <p class="card-desc">本片深入讲述了袁隆平院士从年轻时立志学农，到后来在艰苦条件下攻克杂交水稻技术难关，最终造福全人类的传奇一生。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">详情</a>
+                            <span style="font-size: 0.8rem; color: #999;">豆瓣评分 8.5</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 2 -->
+                <article class="movie-card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">传记电影</span>
+                        <img src="https://picsum.photos/seed/mov2/400/560.jpg" alt="袁隆平电影封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">《袁隆平》</h3>
+                        <div class="card-meta">
+                            <span>2009年</span>
+                            <span>100分钟</span>
+                        </div>
+                        <p class="card-desc">中国电影，以袁隆平院士为原型，艺术化地再现了他在科研道路上的执着探索，以及在改革开放背景下中国农业发展的缩影。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">详情</a>
+                            <span style="font-size: 0.8rem; color: #999;">经典推荐</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 3 -->
+                <article class="movie-card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">新闻纪录片</span>
+                        <img src="https://picsum.photos/seed/doc3/400/560.jpg" alt="杂交水稻纪录片封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">《超级杂交稻》</h3>
+                        <div class="card-meta">
+                            <span>2019年</span>
+                            <span>45分钟</span>
+                        </div>
+                        <p class="card-desc">聚焦袁隆平团队在超级稻研发上的最新成果，展现了科技工作者为了国家粮食安全，不断挑战水稻产量极限的奋斗精神。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">详情</a>
+                            <span style="font-size: 0.8rem; color: #999;">科教片</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 4 -->
+                <article class="movie-card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">人物传记</span>
+                        <img src="https://picsum.photos/seed/doc4/400/560.jpg" alt="袁隆平纪录片封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">《禾下乘凉梦》</h3>
+                        <div class="card-meta">
+                            <span>2021年</span>
+                            <span>60分钟</span>
+                        </div>
+                        <p class="card-desc">通过回忆与访谈，还原了袁隆平院士内心深处那个“禾下乘凉”的梦想，以及他如何用一生去践行这个梦想的感人故事。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">详情</a>
+                            <span style="font-size: 0.8rem; color: #999;">感人至深</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 生平时间轴 -->
+        <section class="section" id="timeline" style="background-color: #fff;">
+            <div class="section-header">
+                <h2 class="section-title">生平大事记</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1930年</div>
+                        <p>出生于北京协和医院，原名袁隆安。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1953年</div>
+                        <p>毕业于西南农学院农学系，主动申请到湖南安江农校任教。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1960年</div>
+                        <p>在安江农校实习农场发现“天然杂交稻”株，从此立志研究杂交水稻。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1973年</div>
+                        <p>成功培育出世界上第一个实用高产杂交水稻品种“南优2号”，实现“三系法”配套。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000年</div>
+                        <p>超级杂交水稻第一期目标亩产700公斤达标。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021年</div>
+                        <p>5月22日在长沙逝世，享年91岁。社会各界以多种形式缅怀这位“共和国勋章”获得者。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题/资讯 -->
+        <section class="section" id="info">
+            <div class="section-header">
+                <h2 class="section-title">相关资料与资讯</h2>
+            </div>
+            <div style="background: var(--white); padding: 30px; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                <h3 style="margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 10px;">袁隆平相关荣誉</h3>
+                <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: var(--text-secondary);">
+                    <li>• 2000年 国家最高科学技术奖</li>
+                    <li>• 2004年 世界粮食奖</li>
+                    <li>• 2019年 “共和国勋章”</li>
+                    <li>• 2019年 拜登总统颁发世界粮食奖</li>
+                </ul>
+                
+                <h3 style="margin: 30px 0 20px; border-left: 4px solid var(--primary-color); padding-left: 10px;">观看指南</h3>
+                <p style="margin-bottom: 10px;">目前关于袁隆平的电影资源主要集中在<b>央视网、湖南卫视、各大视频平台（如爱奇艺、腾讯视频）的纪录片频道</b>。建议优先选择带有官方标识的纪录片，以确保内容的准确性和权威性。</p>
+                <p>部分传记电影可能需要通过<b>正规影碟租赁或正版流媒体平台</b>进行观看。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于稻香影苑</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">本站致力于整理与袁隆平院士相关的影视资料、生平回顾及科学精神传播，是一个公益性质的影像资料索引平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#movies">电影推荐</a></li>
+                        <li><a href="#timeline">生平回顾</a></li>
+                        <li><a href="#info">人物资料</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">袁隆平院士官网</a></li>
+                        <li><a href="#">杂交水稻国家重点实验室</a></li>
+                        <li><a href="#">中国农业科学院</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 稻香影苑 | 致敬袁隆平院士</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+      </html>
