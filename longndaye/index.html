@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="龙女打野顺序攻略：详细介绍龙女出装、符文搭配、野区刷野路线、抓人时机及团战技巧，助你轻松上分。">
+    <meta name="keywords" content="龙女打野顺序,龙女出装,龙女符文,龙女攻略,LoL">
+    <title>龙女打野顺序-英雄联盟龙女高效刷野与上分实战指南</title>
+    <style>
+        :root {
+            --primary-color: #d4af37; /* Gold/Yellow for Dragon theme */
+            --secondary-color: #2c3e50;
+            --bg-color: #1a1a1a;
+            --card-bg: #2b2b2b;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-green: #27ae60;
+            --accent-red: #c0392b;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Core Strategy: Order */
+        .order-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .order-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-num {
+            background-color: var(--primary-color);
+            color: #000;
+            font-weight: bold;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .step-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-left: 3rem;
+        }
+
+        /* Items & Runes */
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .item-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .item-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #444;
+            margin: 0 auto 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .item-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #333;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .checklist-icon {
+            margin-right: 0.5rem;
+            color: var(--accent-green);
+            flex-shrink: 0;
+        }
+
+        .warning-item {
+            color: var(--accent-red);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-answer {
+            padding: 0 1rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        /* Utility */
+        .tag {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            background-color: #333;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.3rem;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>🐉</span> 英雄联盟攻略
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">打野顺序</a></li>
+                    <li><a href="#">出装推荐</a></li>
+                    <li><a href="#">符文搭配</a></li>
+                    <li><a href="#">连招技巧</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>龙女打野顺序与高效刷野指南</h1>
+            <p>掌握正确的刷野路线、出装时机与Gank策略，发挥龙女后期的恐怖AOE伤害。</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">20秒</span>
+                    <span class="stat-label">单刷红蓝Buff耗时</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">6级</span>
+                    <span class="stat-label">强势期爆发节点</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">AOE</span>
+                    <span class="stat-label">团战核心清线能力</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-grid">
+        <!-- Left Column: Core Content -->
+        <main>
+            <section>
+                <h2 class="section-title">标准刷野顺序</h2>
+                <p style="margin-bottom: 1rem; color: var(--text-muted);">起始Buff的选择取决于敌方打野位置和自身状态。以下是主流且稳健的刷野路线。</p>
+                
+                <article class="order-card">
+                    <div class="step-header">
+                        <span class="step-num">1</span>
+                        <span class="step-title">红Buff开局 (主流)</span>
+                    </div>
+                    <p class="step-desc">选择红Buff开局可以提供减速控制，方便前期Gank和反野。路径：红Buff -> 三狼 -> 帮助中单清线 -> 蓝Buff。</p>
+                </article>
+
+                <article class="order-card">
+                    <div class="step-header">
+                        <span class="step-num">2</span>
+                        <span class="step-title">蓝Buff开局 (控龙)</span>
+                    </div>
+                    <p class="step-desc">如果敌方打野是盲僧、赵信等强势打野，建议蓝开。路径：蓝Buff -> 石头人 -> 蛤蟆 -> 红Buff。蓝开能保证技能冷却回复。</p>
+                </article>
+
+                <article class="order-card">
+                    <div class="step-header">
+                        <span class="step-num">3</span>
+                        <span class="step-title">中期节奏 (6级后)</span>
+                    </div>
+                    <p class="step-desc">6级是龙女第一个强势期。利用E技能（换血）和W（回血）快速清理野区。优先入侵敌方野区，寻找机会控下小龙。</p>
+                </article>
+            </section>
+
+            <section>
+                <h2 class="section-title">核心装备出装思路</h2>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="item-icon">🛡️</div>
+                        <div class="item-name">日炎斗篷</div>
+                        <div class="tag">核心</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">👢</div>
+                        <div class="item-name">铁板靴</div>
+                        <div class="tag">鞋子</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">🔥</div>
+                        <div class="item-name">日炎圣盾</div>
+                        <div class="tag">后期</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">⚔️</div>
+                        <div class="item-name">冰霜之心</div>
+                        <div class="tag">反伤</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">🩸</div>
+                        <div class="item-name">斯特拉克的挑战护手</div>
+                        <div class="tag">保命</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">🛡️</div>
+                        <div class="item-name">兰顿之兆</div>
+                        <div class="tag">魔抗</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">符文推荐</h2>
+                <div class="order-card">
+                    <div class="step-header">
+                        <span class="step-title">主系：征服者</span>
+                    </div>
+                    <p class="step-desc">提供持续作战能力，叠加层数后增加伤害和回复，完美契合龙女的技能机制。</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                        <li>迅捷步足：增加移速，优化刷野效率。</li>
+                        <li>凯旋：击杀或参与击杀回复生命值。</li>
+                        <li>致命一击：对低血量敌人造成额外伤害。</li>
+                    </ul>
+                </div>
+                <div class="order-card">
+                    <div class="step-header">
+                        <span class="step-title">副系：坚决</span>
+                    </div>
+                    <p class="step-desc">提升坦度和容错率。</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                        <li>复苏之风：受到伤害回复生命值。</li>
+                        <li>坚定：减少控制时间。</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <h3 class="section-title" style="font-size: 1.2rem; border: none; padding: 0;">打野禁忌</h3>
+                <div class="checklist-item warning-item">
+                    <span class="checklist-icon">⚠️</span>
+                    <span>不要在没出日炎前盲目换血。</span>
+                </div>
+                <div class="checklist-item warning-item">
+                    <span class="checklist-icon">⚠️</span>
+                    <span>避免在河道草丛停留过久。</span>
+                </div>
+                <div class="checklist-item warning-item">
+                    <span class="checklist-icon">⚠️</span>
+                    <span>六级前不要强行越塔。</span>
+                </div>
+                <div class="checklist-item warning-item">
+                    <span class="checklist-icon">⚠️</span>
+                    <span>控制好W技能的使用时机。</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3 class="section-title" style="font-size: 1.2rem; border: none; padding: 0;">Gank技巧</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">利用E技能（换血）快速接近并消耗血量，等待敌方交掉位移技能后开启W（回血）和R（龙息）进场。</p>
+                <button style="width: 100%; padding: 0.8rem; background-color: var(--primary-color); border: none; color: #000; font-weight: bold; cursor: pointer; border-radius: 4px;">查看更多连招教学</button>
+            </div>
+
+            <div class="sidebar-card">
+                <h3 class="section-title" style="font-size: 1.2rem; border: none; padding: 0;">常见问题</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>龙女前期太弱怎么办？</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        前期尽量控好河蟹，利用红Buff的减速进行骚扰。不要贪刀，快速回到野区刷钱才是正解。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>什么时候出日炎斗篷？</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        通常在第一次回家或者第二次回家时购买，这是龙女的核心装备，能极大提升刷野效率和坦度。
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 英雄联盟攻略中心. 本站内容仅供参考，游戏版本更新请以官方为准。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
